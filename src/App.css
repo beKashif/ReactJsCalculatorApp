@@ -1,0 +1,105 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+#root {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	height: 100vh;
+	padding: 20px;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	background: #dfe8f1;
+}
+
+
+.app {
+	position: relative;
+	z-index: 10;
+	margin: auto;
+	top: -10px;
+	height: fit-content;
+	width: 350px;
+	border-radius: 10px;
+	backdrop-filter: blur(12px);
+	border-radius: 13px;
+	background: linear-gradient(145deg, #eff8ff, #c9d1d9);
+	box-shadow:  26px 26px 58px #7b8085,
+				 -26px -26px 58px #ffffff;
+
+}
+
+
+.heading {
+	text-align: center;
+	padding-top: 20px;
+	color: rgb(13, 33, 63);
+}
+
+.container {
+	color: rgb(13, 33, 63);
+}
+
+.result {
+	width: 300px;
+	height: 140px;
+	padding: 20px 30px;
+	text-align: right;
+	position: relative;
+	overflow: hidden;
+}
+
+.result .history {
+	font-size: 19px;
+}
+
+.result .output {
+	font-size: 35px;
+	bottom: 18px;
+}
+
+.result .history,
+.result .output {
+	right: 25px;
+	width: 200vw;
+	position: absolute;
+	text-align: right;
+}
+
+.keyboard {
+	/* display: -ms-grid; */
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.keyboard div.btn {
+	display: -ms-grid;
+	display: grid;
+	place-content: center;
+	width: 100%;
+	height: 75px;
+	padding: 10px;
+	user-select: none;
+	cursor: pointer;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+	border-right: 1px solid rgba(255, 255, 255, 0.02);
+	font-size: large;
+	font-weight: 500;
+}
+
+.keyboard div.btn#clear {
+	grid-column-start: 1;
+	grid-column-end: 3;
+}
+
+.keyboard div.btn:hover {
+	transition: 0.2s;
+	background: rgba(0, 0, 0, 0.05);
+}
+
+.keyboard div.btn:active {
+	transition: 0.2s;
+	background: rgba(0, 0, 0, 0.20);
+}
